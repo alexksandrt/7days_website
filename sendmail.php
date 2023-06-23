@@ -11,19 +11,19 @@
 	$mail->IsHTML(true);
 
 	//От кого письмо
-	$mail->setFrom('info@example.com', 'Заявка с сайта');
+	$mail->setFrom('info@sevendaystudio.com', 'New Application from Sevendaystudio.com');
 	//Кому отправить
-	$mail->addAddress('info@example.com');
+	$mail->addAddress('7days.studio.nz@gmail.com');
 	//Тема письма
-	$mail->Subject = 'Заявка с сайта';
+	$mail->Subject = 'New Application from Sevendaystudio.com';
 
 	//Тело письма
 	
 	if(trim(!empty($_POST['name']))){
-		$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
+		$body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
 	}
 	if(trim(!empty($_POST['tel']))){
-		$body.='<p><strong>Телефон:</strong> '.$_POST['tel'].'</p>';
+		$body.='<p><strong>Phone Number:</strong> '.$_POST['tel'].'</p>';
 	}
 	
 
@@ -31,9 +31,9 @@
 
 	//Отправляем
 	if (!$mail->send()) {
-		$message = 'Ошибка';
+		$message = 'Error';
 	} else {
-		$message = 'Данные отправлены!';
+		$message = 'Sent!';
 	}
 
 	$response = ['message' => $message];

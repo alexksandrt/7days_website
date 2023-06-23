@@ -143,7 +143,7 @@
             this.options.init ? this.initPopups() : null;
         }
         initPopups() {
-            this.popupLogging(`Woke Up`);
+            this.popupLogging(`Проснулся`);
             this.eventsPopup();
         }
         eventsPopup() {
@@ -159,7 +159,7 @@
                         this._selectorOpen = true;
                         this.open();
                         return;
-                    } else this.popupLogging(`Oops, the attribute is not filled on ${buttonOpen.classList}`);
+                    } else this.popupLogging(`Ой ой, не заполнен атрибут у ${buttonOpen.classList}`);
                     return;
                 }
                 const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
@@ -244,8 +244,8 @@
                             popup: this
                         }
                     }));
-                    this.popupLogging(`Opened popup`);
-                } else this.popupLogging(`Ups, there is no such popup. Check the correctness of the input.`);
+                    this.popupLogging(`Открыл попап`);
+                } else this.popupLogging(`Ой ой, такого попапа нет.Проверьте корректность ввода. `);
             }
         }
         close(selectorValue) {
@@ -279,7 +279,7 @@
             setTimeout((() => {
                 this._focusTrap();
             }), 50);
-            this.popupLogging(`Closed popup`);
+            this.popupLogging(`Закрыл попап`);
         }
         _getHash() {
             if (this.options.hashSettings.location) this.hash = this.targetOpen.selector.includes("#") ? this.targetOpen.selector : this.targetOpen.selector.replace(".", "#");
@@ -313,7 +313,7 @@
             if (!this.isOpen && this.lastFocusEl) this.lastFocusEl.focus(); else focusable[0].focus();
         }
         popupLogging(message) {
-            this.options.logging ? FLS(`[Popupos]: ${message}`) : null;
+            this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
         }
     }
     flsModules.popup = new Popup({});
@@ -328,8 +328,8 @@
                 const paralaxMouse = document.querySelectorAll("[data-prlx-mouse]");
                 if (paralaxMouse.length) {
                     this.paralaxMouseInit(paralaxMouse);
-                    this.setLogging(`Woke up, watching objects: (${paralaxMouse.length})`);
-                } else this.setLogging("There are no objects. I'm sleeping...zzZZZzZZz...");
+                    this.setLogging(`Проснулся, слежу за объектами: (${paralaxMouse.length})`);
+                } else this.setLogging("Нет ни одного объекта. Сплю...zzZZZzZZz...");
             }
         }
         paralaxMouseInit(paralaxMouse) {
@@ -407,8 +407,8 @@
                     behavior: "smooth"
                 });
             }
-            FLS(`[gotoBlock]: Yuhuu... let's go to ${targetBlock}`);
-        } else FLS(`[gotoBlock]: Oh oh .. There is no such block on the page: ${targetBlock}`);
+            FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
+        } else FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
     };
     function formFieldsInit(options = {
         viewPass: false,
@@ -593,10 +593,10 @@
                 }
             }), 0);
             formValidate.formClean(form);
-            formLogging(`Form sent!`);
+            formLogging(`Форма отправлена!`);
         }
         function formLogging(message) {
-            FLS(`[Forms]: ${message}`);
+            FLS(`[Формы]: ${message}`);
         }
     }
     let addWindowScrollEvent = false;
@@ -742,8 +742,32 @@
     window.addEventListener("scroll", script_headerScroll);
     document.addEventListener("DOMContentLoaded", script_headerScroll);
     window.addEventListener("DOMContentLoaded", (function() {
-
-        
+        [].forEach.call(document.querySelectorAll(".tel-mask"), (function(input) {
+            let keyCode;
+            function mask(event) {
+                event.keyCode && (keyCode = event.keyCode);
+                let pos = this.selectionStart;
+                if (pos < 3) event.preventDefault();
+                let matrix = "+64 (___) ___ ____", i = 0, def = matrix.replace(/\D/g, ""), val = this.value.replace(/\D/g, ""), new_value = matrix.replace(/[_\d]/g, (function(a) {
+                    return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+                }));
+                i = new_value.indexOf("_");
+                if (i !== -1) {
+                    i < 5 && (i = 3);
+                    new_value = new_value.slice(0, i);
+                }
+                let reg = matrix.substr(0, this.value.length).replace(/_+/g, (function(a) {
+                    return "\\d{1," + a.length + "}";
+                })).replace(/[+()]/g, "\\$&");
+                reg = new RegExp("^" + reg + "$");
+                if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+                if (event.type === "blur" && this.value.length < 5) this.value = "";
+            }
+            input.addEventListener("input", mask, false);
+            input.addEventListener("focus", mask, false);
+            input.addEventListener("blur", mask, false);
+            input.addEventListener("keydown", mask, false);
+        }));
     }));
     const inputs = document.querySelectorAll(".under-input");
     for (let item of inputs) {
