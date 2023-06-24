@@ -20,10 +20,10 @@
 	//Тело письма
 	
 	if(trim(!empty($_POST['name']))){
-		$body.='<p><strong>Name:</strong> '.$_POST['name'].'</p>';
+		$body.='Name: '.$_POST['name'].;
 	}
 	if(trim(!empty($_POST['tel']))){
-		$body.='<p><strong>Phone Number:</strong> '.$_POST['tel'].'</p>';
+		$body.='Phone Number: '.$_POST['tel'].;
 	}
 	
 
