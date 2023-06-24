@@ -72,6 +72,7 @@
             if (window.FLS) console.log(message);
         }), 0);
     }
+
     class Popup {
         constructor(options) {
             let config = {

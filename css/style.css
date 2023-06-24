@@ -2416,10 +2416,10 @@ font-size: small;
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding: 130px 0 50px 0;
-    background-color: #e3e3e3;
-    -webkit-transition: right 0.3s;
-    -o-transition: right 0.3s;
-    transition: right 0.3s;
+    background-color: #00FF66;
+    -webkit-transition: right 0.5s;
+    -o-transition: right 0.5s;
+    transition: right 0.5s;
   }
 
   .header .menu__wrapper::before {
