@@ -696,7 +696,7 @@ body::after {
 
 .header .menu__phone {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 20px;  
 }
 
 .icon-menu {
@@ -715,6 +715,11 @@ body::after {
   line-height: 1.25;
   font-size: 14px;
   background-color: #333333;
+}
+
+.footer__info {
+font-weight: 200;
+font-size: small;
 }
 
 .footer__top {
@@ -832,10 +837,12 @@ body::after {
 
 .footer__copy {
   font-family: "Montserrat", sans-serif;
+
 }
 
 .footer__copy span {
   font-weight: 400;
+
 }
 
 .footer__developer {
@@ -1372,6 +1379,10 @@ body::after {
   .footer {
     font-size: 15px;
   }
+  .footer__copy{
+    text-align: center;
+    width: 100vw;
+  }
 
   .footer__top {
     padding-top: 35px;
@@ -1593,6 +1604,7 @@ body::after {
 
   .header .menu__logo {
     font-size: 29px;
+
   }
 
   .header .menu__list {
@@ -1829,6 +1841,7 @@ body::after {
 
   .header .menu__logo {
     font-size: 30px;
+
   }
 
   .header .menu__list {
@@ -2065,6 +2078,7 @@ body::after {
 
   .header .menu__logo {
     font-size: 32px;
+
   }
 
   .header .menu__list {
@@ -2305,10 +2319,13 @@ body::after {
   }
 
   .consult__image {
-    -webkit-transform: scale(1.5) translate(0, 10%);
-        -ms-transform: scale(1.5) translate(0, 10%);
-            transform: scale(1.5) translate(0, 10%);
+    -webkit-transform: scale(1.4) translate(0, 10%);
+        -ms-transform: scale(1.4) translate(0, 10%);
+            transform: scale(1.4) translate(0, 10%);
+            padding-bottom: 2px;
+            padding-right: 10px;
   }
+
 }
 
 @media (max-width: 61.99875em) {
@@ -2447,7 +2464,9 @@ body::after {
   .header .menu__phone,
   .header .menu__icon {
     z-index: 50;
+    
   }
+
 
   .header .menu__wrapper > .header .menu__logo,
   .header .menu__socials,
@@ -2511,7 +2530,7 @@ body::after {
   .advantages__cards {
     -ms-grid-rows: (auto)[2];
     -ms-grid-columns: (1fr)[2];
-        grid-template: repeat(2, auto)/repeat(2, 1fr);
+    grid-template: repeat(2, auto)/repeat(2, 1fr);
   }
 
   .advantages__card:last-child {
