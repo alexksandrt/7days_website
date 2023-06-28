@@ -25,6 +25,9 @@
 	if(trim(!empty($_POST['tel']))){
 		$body.='Phone Number: '.$_POST['tel'].' | ';
 	}
+	if(trim(!empty($_POST['text2']))){
+		$body.='Message: '.$_POST['text2'].' | ';
+	}
 	
 
 	$mail->Body = $body;

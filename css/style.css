@@ -100,10 +100,10 @@ h6 {
 }
 
 /*
-(i) Стили будут применяться ко 
-всем классам содержащим *__container
-Например header__container, main__container и т.д.
-Снипет (HTML): cnt
+(i) Styles will be applied to
+to all classes containing *__container
+For example header__container, main__container etc.
+Snippets (HTML): cnt
 */
 
 [class*=__container] {
@@ -704,7 +704,8 @@ body::after {
 }
 
 .menu-open .menu__wrapper {
-  right: 0;
+  right: 0 !important;
+
 }
 
 .footer {
@@ -1047,9 +1048,9 @@ font-size: small;
 
 .services .services-card__media-image {
   height: 100%;
-  -webkit-transform: translate(30px, 0);
-      -ms-transform: translate(30px, 0);
-          transform: translate(30px, 0);
+  -webkit-transform: translate(0px, 0);
+      -ms-transform: translate(0px, 0);
+          transform: translate(0px, 0);
 }
 
 .services .services-card__media-image img {
@@ -2284,9 +2285,9 @@ font-size: small;
 
 @media all and (max-width: 74.99875em) {
   .services .services-card__media-image {
-    -webkit-transform: translate(20px, 0);
-        -ms-transform: translate(20px, 0);
-            transform: translate(20px, 0);
+    -webkit-transform: translate(0px, 0);
+        -ms-transform: translate(0px, 0);
+            transform: translate(0px, 0);
   }
 
   .services .services-card__content {
@@ -2398,7 +2399,7 @@ font-size: small;
   .header .menu__wrapper {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 100%;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -2427,7 +2428,7 @@ font-size: small;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    right: -100%;
     width: 100%;
     height: 80px;
     z-index: 45;
