@@ -370,7 +370,7 @@ body::after {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 20px;
@@ -707,6 +707,20 @@ body::after {
   right: 0 !important;
 
 }
+.disclaimer {
+  margin-top: 50px;
+}
+.disclaimer__text {
+margin: 0 50px;
+text-align: center;
+font-size: 16px;
+
+}
+.disclaimer__text span {
+color: #00E45B;
+font-size: 25px;
+font-weight: 200;
+}
 
 .footer {
   margin-top: 80px;
@@ -909,6 +923,12 @@ font-size: small;
   line-height: 1.2083333333;
   font-size: 30px;
   padding-top: 2vw;
+  padding-right: 1.4vh;
+}
+
+.first-screen__title span {
+  color: #00E45B;
+  font-weight: 200;
 }
 
 .first-screen__subtitle {
@@ -916,10 +936,12 @@ font-size: small;
   font-size: 24px;
   line-height: 1.2083333333;
   font-size: 18px;
+  padding-right: 1vh;
 }
 
 .first-screen__button {
   color: #ffffff;
+  border-radius: 10px;
 }
 
 .first-screen__content-decor .decor-1 {
@@ -1024,6 +1046,9 @@ font-size: small;
   -ms-grid-columns: 1fr 30px 1fr;
       grid-template: 1fr/1fr 1fr;
   gap: 30px;
+}
+.services-card__button {
+  border-radius: 10px;
 }
 
 .services .services-card {
@@ -1143,9 +1168,10 @@ font-size: small;
   margin-bottom: 1.25em;
 }
 
-.about__text p:not(:last-child) span {
+.about__text span {
   color: #00E45B;
 }
+
 
 .form-screen {
   margin-top: 80px;
@@ -1550,7 +1576,7 @@ font-size: small;
   }
 
   .consult__title {
-    font-size: 33px;
+    font-size: 43px;
   }
 
   .consult__text {
@@ -1787,7 +1813,7 @@ font-size: small;
   }
 
   .consult__title {
-    font-size: 35px;
+    font-size: 43px;
   }
 
   .consult__text {
@@ -2024,7 +2050,7 @@ font-size: small;
   }
 
   .consult__title {
-    font-size: 38px;
+    font-size: 45px;
   }
 
   .consult__text {
@@ -2261,7 +2287,7 @@ font-size: small;
   }
 
   .consult__title {
-    font-size: 40px;
+    font-size: 47px;
   }
 
   .consult__text {
@@ -2324,7 +2350,7 @@ font-size: small;
         -ms-transform: scale(1.4) translate(0, 10%);
             transform: scale(1.4) translate(0, 10%);
             padding-bottom: 2px;
-            padding-right: 10px;
+            padding-right: 64px;
   }
 
 }
@@ -2540,13 +2566,17 @@ font-size: small;
   }
 
   .consult__content {
-    -ms-grid-column-span: 12;
-    grid-column: span 12;
+    /* -ms-grid-column-span: 12; */
+    /* grid-column: span 12; */
     padding-right: 20px;
   }
 
-  .consult__image {
-    display: none;
+  .consult__image img {
+    /* display: none; */
+    -webkit-transform: scale(1.5) translate(0, 10%);
+    -ms-transform: scale(1.5) translate(0, 10%);
+        transform: scale(1.5) translate(0, 10%);
+        padding-bottom: 62px;
   }
 }
 
@@ -2598,6 +2628,28 @@ font-size: small;
   .first-screen__cube {
     display: none;
   }
+  .consult__content {
+    display: grid;
+    text-align: center;
+  }
+  .consult__wrapper{
+    gap: 0px;
+    -ms-grid-rows: 1fr 375px;
+    -ms-grid-columns: 1fr;
+        grid-template: 1fr 380px/1fr;
+  }
+  .consult__button {
+    margin: auto;
+
+  }
+
+  .consult__image{
+    -webkit-transform: scale(1) translate(0, 10%);
+    -ms-transform: scale(1) translate(0, 10%);
+        transform: scale(1) translate(0, 10%);
+padding: 0 0 69px 0px;
+  }
+
 
   .about {
     padding: 30px 0;
