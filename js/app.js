@@ -566,7 +566,7 @@
                         form.classList.remove("_sending");
                         formSent(form, responseResult);
                     } else {
-                        alert("Ошибка");
+                        alert("Error");
                         form.classList.remove("_sending");
                     }
                 } else if (form.hasAttribute("data-dev")) {
