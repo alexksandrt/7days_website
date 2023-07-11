@@ -45,7 +45,7 @@ var APP_DATA = {
           "yaw": 1.1043206463477944,
           "pitch": 0.006983825108317632,
           "title": "Kitchen",
-          "text": "<font color=\"#e8eaed\" face=\"Google Sans, arial, sans-serif\"><span style=\"font-size: 20px;\">a bustling hub where culinary creations come to life. With its gleaming stainless steel appliances and ample counter space, it invites creativity and serves as a gathering place for cooking enthusiasts.</span></font><br>"
+          "text": "a bustling hub where culinary creations come to life. With its gleaming stainless steel appliances and ample counter space, it invites creativity and serves as a gathering place for cooking enthusiasts."
         },
         {
           "yaw": -2.931720983495495,
@@ -57,7 +57,7 @@ var APP_DATA = {
           "yaw": -1.8546113329325298,
           "pitch": 0.2949753265700945,
           "title": "Sofa",
-          "text": "The relaxation area on the sofa is an inviting space that exudes comfort and tranquility. With plush cushions and soft textiles, it provides a cozy haven where one can"
+          "text": "The relaxation area on the sofa is an inviting space that exudes comfort and tranquility. With plush cushions and soft textiles, it provides a cozy haven where one can sink into blissful relaxation. "
         }
       ]
     },
