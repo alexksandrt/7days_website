@@ -673,6 +673,7 @@ body::after {
   font-family: "Montserrat", sans-serif;
 }
 
+
 .header .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -696,9 +697,16 @@ body::after {
 
 .header .menu__phone {
   font-weight: 700;
-  font-size: 20px;  
+  font-size: 18px;
+}
+.phonenum_inside {
+  display: block;
 }
 
+.phonenum_inside a {
+  display: block;
+  margin-top: 8px; 
+}
 .icon-menu {
   display: none;
 }
@@ -1077,6 +1085,14 @@ font-size: small;
   background-color: #00FF66;
 }
 
+.services .services-card__media.services-card-media-grey {
+  background-color: #6c6c6c;
+}
+
+.services .services-card__media.services-card-media-lightgreen {
+  background-color: #e1fbeb;
+}
+
 .services .services-card__media-image {
   height: 100%;
   -webkit-transform: translate(0px, 0);
@@ -1113,6 +1129,74 @@ font-size: small;
   font-size: 16px;
   line-height: 1.1875;
 }
+
+
+.whyuse {
+  margin-top: 10px;
+  
+}
+
+/* .whyuse__container {
+  display: -ms-grid;
+  display: grid;
+  gap: 100px;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 100px 1fr;
+      grid-template: 1fr/1fr 1fr;
+} */
+
+.whyuse__content {
+  padding: 60px 0 0;
+}
+
+.whyuse__media {
+  position: relative;
+}
+
+.whyuse__image {
+  -webkit-transform: scale(1.13);
+      -ms-transform: scale(1.13);
+          transform: scale(1.13);
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+}
+
+.whyuse__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.whyuse__title {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: #00E45B;
+  line-height: 1.203125;
+  font-size: 30px;
+}
+
+.whyuse__text {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 28px;
+}
+
+.whyuse__text p:not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.whyuse__text span {
+  color: #00E45B;
+}
+
+
+
 
 .about {
   margin-top: 80px;
@@ -1179,6 +1263,9 @@ font-size: small;
 }
 
 
+
+
+
 .form-screen {
   margin-top: 80px;
 }
@@ -1219,7 +1306,7 @@ font-size: small;
   margin-bottom: 1.25em;
   color: #00E45B;
   line-height: 1.2083333333;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .advantages__cards {
@@ -1228,7 +1315,7 @@ font-size: small;
   gap: 30px;
   -ms-grid-rows: auto;
   -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
-      grid-template: repeat(1, auto)/repeat(3, 1fr);
+      grid-template: repeat(1, auto)/repeat(2, 1fr);
 }
 
 .advantages__card {
@@ -1256,16 +1343,25 @@ font-size: small;
      object-fit: contain;
 }
 
+.advantages__text-icon {
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  font-weight: 900;
+  color: #dadada;
+  font-size: 50px;
+}
+
 .advantages__card-title {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 1em;
   line-height: 1.2222222222;
 }
 
 .advantages__card-text {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.2142857143;
 }
 
@@ -1560,7 +1656,9 @@ font-size: small;
   .projects__title {
     font-size: 35px;
   }
-
+  .whyuse__title {
+    font-size: 35px;
+  }
   .consult {
     margin-top: 98px;
   }
@@ -1798,6 +1896,9 @@ font-size: small;
     font-size: 39px;
   }
 
+  .whyuse__title {
+    font-size: 39px;
+  }
   .consult {
     margin-top: 115px;
   }
@@ -1819,7 +1920,7 @@ font-size: small;
   }
 
   .consult__title {
-    font-size: 43px;
+    font-size: 39px;
   }
 
   .consult__text {
@@ -2024,7 +2125,7 @@ font-size: small;
   }
 
   .advantages__card {
-    padding-top: 50px;
+    padding-top: 75px;
   }
 
   .projects {
@@ -2032,6 +2133,9 @@ font-size: small;
   }
 
   .projects__title {
+    font-size: 44px;
+  }
+  .whyuse__title {
     font-size: 44px;
   }
 
@@ -2056,7 +2160,7 @@ font-size: small;
   }
 
   .consult__title {
-    font-size: 45px;
+    font-size: 43px;
   }
 
   .consult__text {
@@ -2271,7 +2375,9 @@ font-size: small;
   .projects__title {
     font-size: 48px;
   }
-
+  .whyuse__title {
+    font-size: 48px;
+  }
   .consult {
     margin-top: 150px;
   }
@@ -2293,7 +2399,7 @@ font-size: small;
   }
 
   .consult__title {
-    font-size: 47px;
+    font-size: 45px;
   }
 
   .consult__text {
@@ -2603,7 +2709,6 @@ font-size: small;
   .header .menu__phone {
     font-size: 25px;
     margin-top: 2em;
-    display: block;
   }
 
   .footer__top .footer__container {
